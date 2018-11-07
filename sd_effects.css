@@ -14,6 +14,7 @@
 */
 
 /* HTML Styles */
+/* This code affects the html tag and sets the background image to a png then makes the position of the image fixed and the size cover plus makes the width 100% */
 html {
     background-image: url("sd_back1.png");
     background-position: fixed;
@@ -23,22 +24,42 @@ html {
 
 
 /* Body Styles */
+/* This affects the body element and sets the background image of this element to a png and then puts in a bunch of radial graidients that an ellipse to the image at different position that go from a white color to an almost completly transparent color. */
 body {
     background: url("sd_back2.png"), radial-gradient(closest-corner at 40% 70%, white 15%, rgba(151, 151, 151, 0.5) 50%),
         radial-gradient(closest-corner at 80% 40%, white 15%, rgba(0, 0, 0, 0)30%), radial-gradient(closest-side at 10% 20%,
         white 20%, rgba(0, 0, 0, 0)45%), radial-gradient(5% 5% at 90% 10%, white 15%, rgba(0, 0, 0, 0)40%), rgb(151, 151, 151);
+    box-shadow: 30px 0px 45px rgb(31, 31, 31), -30px 0px 45px rgb(31, 31, 31);
 }
 
 
 
 /* Navigation List Styles */
-
+/* This affects the anchor tags in the header that is a direct descendant of the body tag and puts a border on the outside that is 5px and is a custom rgb value.*/
+body>header a {
+    border: outset 5px rgb(211, 211, 255);
+}
 
 
 
 /* Section Left Styles */
+/* This affects the h1 tags in an article tag thats in the left section and makes the text color an rgb value and adds a text shadow */
+section#left article h1 {
+    color: rgb(211, 211, 211);
+    text-shadow: 0px 0px 5px black;
+}
 
+/* This affects the mportrait id in the article and in the left section and makes the filters have a drop shadow, grayscale, and sets the opacity if the image. */
+section#left article #mportrait {
+    -webkit-filter: drop-shadow(-15px 0px 5px rgba(51, 51, 51, 0.9)) grayscale(0.7) opacity(0.6);
+    filter: drop-shadow(-15px 0px 5px rgba(51, 51, 51, 0.9)) grayscale(0.7) opacity(0.6);
+    transform: rotateY(180deg);
+}
 
 
 
 /* Footer Styles */
+/* This affects the footer element and sets a solid border around the footer that is 2px in width and has a custom rgb value.  */
+footer {
+    border: solid 2px rgb(171, 171, 171);
+}
